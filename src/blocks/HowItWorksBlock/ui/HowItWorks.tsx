@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Card } from './ui/card';
+import { Card } from '@/shared/ui/card';
 import { UserPlus, Brain, Target, TrendingUp } from 'lucide-react';
 
 const steps = [

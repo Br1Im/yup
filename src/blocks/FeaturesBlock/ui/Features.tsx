@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
-import { Card } from './ui/card';
-import { Button } from './ui/button';
-import { Slider } from './ui/slider';
-import { ScrollArea } from './ui/scroll-area';
+import { Card } from '@/shared/ui/card';
+import { Button } from '@/shared/ui/button';
+import { Slider } from '@/shared/ui/slider';
+import { ScrollArea } from '@/shared/ui/scroll-area';
 import { useState } from 'react';
 import { 
   Brain, 

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ImageWithFallback } from '@/components/figma/ImageWithFallback';
 import { CheckCircle, Award, Users, Zap } from 'lucide-react';
 
 const achievements = [

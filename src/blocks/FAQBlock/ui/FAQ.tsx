@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from './ui/accordion';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/shared/ui/accordion';
 
 const faqs = [
   {

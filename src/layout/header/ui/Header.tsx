@@ -1,6 +1,6 @@
 import { Menu } from 'lucide-react';
-import { Button } from './ui/button';
-import logoYUP from './image/logo_YUP.png';
+import { Button } from '@/shared/ui/button';
+import logoYUP from '@/components/image/logo_YUP.png';
 import { useState } from 'react';
 
 export function Header() {
