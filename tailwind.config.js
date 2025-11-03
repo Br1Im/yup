@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Pixel: ['Pixel', 'system-ui', 'pixel'],
+      },
       colors: {
         moss: '#424123',
         olive: '#80744C', 

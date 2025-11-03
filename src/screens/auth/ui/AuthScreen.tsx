@@ -1,7 +1,7 @@
-import { RegistrationBlock } from "@/blocks/RegistrationFormBlock/ui/RegistrationFormBlock";
+import { AuthForm } from "@/blocks/AuthFormBlock";
 
 export function AuthScreen() { 
     return(
-        <RegistrationBlock/>
+        <AuthForm/>
     );
 }
