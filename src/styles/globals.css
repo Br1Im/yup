@@ -382,3 +382,29 @@ input[type="range"]::-moz-range-thumb:hover {
 html {
   font-size: var(--font-size);
 }
+
+@font-face {
+  font-family: 'Pixel';
+  src: url('../shared/fonts/69-font.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Мэппинг bold на тот же файл, если нет отдельного начертания */
+@font-face {
+  font-family: 'Pixel';
+  src: url('../shared/fonts/69-font.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Мигающий курсор для эффекта печати */
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.blink {
+  animation: cursor-blink 1s steps(1, end) infinite;
+}
