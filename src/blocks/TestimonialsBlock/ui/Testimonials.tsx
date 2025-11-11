@@ -49,7 +49,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-oat relative overflow-hidden">
+    <section id="testimonials" className="py-20 bg-oat relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
