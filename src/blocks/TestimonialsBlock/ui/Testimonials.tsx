@@ -49,7 +49,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-oat relative overflow-hidden">
+    <section id="testimonials" className="py-20 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -58,16 +58,16 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-blush text-moss text-sm font-semibold rounded-full mb-6">
+          <span className="inline-block px-4 py-2 bg-cyan-500/20 border border-cyan-500 text-cyan-500 text-sm font-[Pixel] rounded-lg mb-6">
             Отзывы
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-moss mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-[Pixel]">
             Истории успеха
             <br />
             наших пользователей
           </h2>
           
-          <p className="text-xl text-olive max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto font-[Pixel]">
             Тысячи людей уже трансформировали свою жизнь с помощью YUP. 
             Читайте их реальные истории развития и достижений.
           </p>
@@ -84,29 +84,29 @@ export function Testimonials() {
               whileHover={{ y: -8 }}
               className="group"
             >
-              <Card className="h-full p-8 hover:shadow-2xl transition-all duration-300 border-2 hover:border-olive/30 relative overflow-hidden bg-white/80 backdrop-blur-sm">
+              <Card className="h-full p-8 hover:shadow-2xl transition-all duration-300 border border-white/20 relative overflow-hidden bg-white/10 backdrop-blur-sm">
                 <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <Quote className="w-12 h-12 text-olive" />
+                  <Quote className="w-12 h-12 text-cyan-500" />
                 </div>
                 
                 <div className="relative z-10 space-y-6">
                   <div className="flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-olive text-olive" />
+                      <Star key={i} className="w-5 h-5 fill-cyan-500 text-cyan-500" />
                     ))}
                   </div>
                   
-                  <p className="text-moss/80 leading-relaxed italic">
+                  <p className="text-white/80 leading-relaxed italic font-[Pixel]">
                     "{testimonial.content}"
                   </p>
                   
-                  <div className="flex items-center gap-4 pt-4 border-t border-olive/20">
-                    <div className="w-12 h-12 bg-olive rounded-full flex items-center justify-center text-xl">
+                  <div className="flex items-center gap-4 pt-4 border-t border-white/20">
+                    <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center text-xl">
                       {testimonial.avatar}
                     </div>
                     <div>
-                      <div className="font-semibold text-moss">{testimonial.name}</div>
-                      <div className="text-sm text-olive">{testimonial.role}</div>
+                      <div className="font-semibold text-white font-[Pixel]">{testimonial.name}</div>
+                      <div className="text-sm text-white/70 font-[Pixel]">{testimonial.role}</div>
                     </div>
                   </div>
                 </div>
@@ -122,17 +122,17 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="inline-flex items-center gap-4 p-6 bg-blush rounded-2xl">
+          <div className="inline-flex items-center gap-4 p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl">
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-olive text-olive" />
+                  <Star key={i} className="w-6 h-6 fill-cyan-500 text-cyan-500" />
                 ))}
               </div>
-              <span className="text-2xl font-bold text-moss">4.9</span>
+              <span className="text-2xl font-bold text-white font-[Pixel]">4.9</span>
             </div>
-            <div className="text-lg text-moss/80">
-              Средняя оценка от <span className="font-semibold text-moss">10,000+</span> пользователей
+            <div className="text-lg text-white/80 font-[Pixel]">
+              Средняя оценка от <span className="font-semibold text-white">10,000+</span> пользователей
             </div>
           </div>
         </motion.div>

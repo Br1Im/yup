@@ -2,12 +2,14 @@ import { Menu } from 'lucide-react';
 import { Button } from '@/shared/ui/button';
 import logoYUP from '@/components/image/logo_YUP.png';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export function Header() {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="relative">
@@ -21,18 +23,24 @@ export function Header() {
           >
             <div className="relative overflow-hidden w-full">
               <span 
-                className={`text-xl font-bold text-moss inline-block whitespace-nowrap ${
+                className={`text-xl font-bold text-white inline-block whitespace-nowrap ${
                   isHovered ? 'yup-fade-out' : 'yup-return-in'
                 }`}
-                style={{ animationFillMode: 'forwards' }}
+                style={{ 
+                  animationFillMode: 'forwards',
+                  fontFamily: '"Press Start 2P", monospace'
+                }}
               >
                 YUP
               </span>
               <span 
-                className={`text-xl font-bold text-moss absolute top-0 left-0 inline-block whitespace-nowrap ${
+                className={`text-xl font-bold text-cyan-500 absolute top-0 left-0 inline-block whitespace-nowrap ${
                   isHovered ? 'yup-fade-in' : 'yup-return-out'
                 }`}
-                style={{ animationFillMode: 'forwards' }}
+                style={{ 
+                  animationFillMode: 'forwards',
+                  fontFamily: '"Press Start 2P", monospace'
+                }}
               >
                 YourUP
               </span>
@@ -41,25 +49,29 @@ export function Header() {
         </div>
         
         <nav className="hidden md:flex items-center gap-6">
-          <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#about" className="text-white/70 hover:text-white transition-colors text-sm">
             О платформе
           </a>
-          <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#features" className="text-white/70 hover:text-white transition-colors text-sm">
             Возможности
           </a>
-          <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#how-it-works" className="text-white/70 hover:text-white transition-colors text-sm">
             Как работает
           </a>
-          <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#testimonials" className="text-white/70 hover:text-white transition-colors text-sm">
             Отзывы
           </a>
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="text-moss hover:text-olive">
+          <Button 
+            variant="ghost" 
+            className="text-white hover:text-cyan-500 text-sm"
+            onClick={() => navigate('/auth')}
+          >
             Войти
           </Button>
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <Button variant="ghost" size="icon" className="md:hidden text-white">
             <Menu className="w-5 h-5" />
           </Button>
         </div>

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '@/components/figma/ImageWithFallback';
 import { CheckCircle, Award, Users, Zap } from 'lucide-react';
+import heroImage2 from '@/shared/images/hero_image_2.png';
 
 const achievements = [
   {
@@ -36,7 +37,7 @@ const benefits = [
 
 export function About() {
   return (
-    <section id="about" className="py-20 bg-oat">
+    <section id="about" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -47,21 +48,21 @@ export function About() {
             className="space-y-8"
           >
             <div className="space-y-6">
-              <h2 className="text-4xl lg:text-5xl font-bold">
-                <span className="text-moss">
-                  О платформе YUP
+              <h2 className="text-3xl lg:text-4xl font-bold">
+                <span className="text-white">
+                  О платформе <span style={{ fontFamily: '"Press Start 2P", monospace' }}>YUP</span>
                 </span>
               </h2>
               
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                YUP — это революционная AI-платформа, которая меняет подход к саморазвитию. 
+              <p className="text-base text-white/80 leading-relaxed">
+                <span style={{ fontFamily: '"Press Start 2P", monospace' }}>YUP</span> — это революционная AI-платформа, которая меняет подход к саморазвитию. 
                 Мы объединили достижения искусственного интеллекта, нейронауки и психологии, 
                 чтобы создать персонального наставника для каждого пользователя.
               </p>
               
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-sm text-white/70 leading-relaxed">
                 Наша миссия — сделать развитие естественной частью жизни, а не отдельной задачей. 
-                YUP адаптируется под ваш ритм жизни, цели и способности, создавая уникальный 
+                <span style={{ fontFamily: '"Press Start 2P", monospace' }}>YUP</span> адаптируется под ваш ритм жизни, цели и способности, создавая уникальный 
                 путь роста для каждого человека.
               </p>
             </div>
@@ -74,13 +75,13 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                  className="text-center p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <achievement.icon className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-gray-900 mb-1">
+                  <achievement.icon className="w-8 h-8 text-cyan-500 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-white mb-1" style={{ fontFamily: '"Press Start 2P", monospace' }}>
                     {achievement.number}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs text-white/70">
                     {achievement.text}
                   </div>
                 </motion.div>
@@ -97,16 +98,15 @@ export function About() {
           >
             <div className="relative">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1758600588015-4785b34c537f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZW9wbGUlMjBsZWFybmluZyUyMGdyb3d0aCUyMGRldmVsb3BtZW50fGVufDF8fHx8MTc1OTUyMDE4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="People Learning and Growing"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                src={heroImage2}
+                alt="YUP Platform"
+                className="w-full h-auto rounded-2xl"
               />
-              <div className="absolute inset-0 bg-moss/20 rounded-2xl"></div>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-gray-900">
-                Почему выбирают YUP?
+              <h3 className="text-xl font-semibold text-white">
+                Почему выбирают <span style={{ fontFamily: '"Press Start 2P", monospace' }}>YUP</span>?
               </h3>
               <div className="space-y-3">
                 {benefits.map((benefit, index) => (
@@ -116,10 +116,10 @@ export function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-3"
+                    className="flex items-start gap-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-muted-foreground">{benefit}</span>
+                    <CheckCircle className="w-4 h-4 text-cyan-500 flex-shrink-0 mt-1" />
+                    <span className="text-white/80 text-sm leading-relaxed">{benefit}</span>
                   </motion.div>
                 ))}
               </div>

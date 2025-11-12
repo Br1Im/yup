@@ -126,12 +126,10 @@ export function AuthForm() {
 
   const onLoginSubmit = (data: LoginFormData) => {
     console.log("Login data:", data);
-    // Здесь будет логика входа
   };
 
   const onRegisterSubmit = (data: RegisterFormData) => {
     console.log("Register data:", data);
-    // Здесь будет логика регистрации
   };
 
   return (
