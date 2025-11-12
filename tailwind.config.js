@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Pixel: ['Pixel', 'system-ui', 'pixel'],
+        Pixel: ['Pixel', 'monospace'],
+        PixelEn: ['"Pixelify Sans"', 'monospace'],
       },
       colors: {
         moss: '#424123',

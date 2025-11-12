@@ -38,7 +38,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="py-20 bg-oat">
+    <section className="py-20 bg-transparent">
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -47,17 +47,17 @@ export function FAQ() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-blush text-moss text-sm font-semibold rounded-full mb-6">
+          <span className="inline-block px-4 py-2 bg-cyan-500/20 border border-cyan-500 text-cyan-500 text-sm font-[Pixel] rounded-lg mb-6">
             FAQ
           </span>
           
-          <h2 className="text-4xl lg:text-5xl font-bold text-moss mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-[Pixel]">
             Ответы на вопросы
             <br />
             о платформе YUP
           </h2>
           
-          <p className="text-xl text-olive">
+          <p className="text-xl text-white/80 font-[Pixel]">
             Не нашли ответ на свой вопрос? Напишите нам, и мы поможем!
           </p>
         </motion.div>
@@ -79,12 +79,12 @@ export function FAQ() {
               >
                 <AccordionItem 
                   value={`item-${index}`} 
-                  className="bg-white/80 backdrop-blur-sm border-2 border-olive/20 rounded-xl px-6 hover:border-olive/40 transition-colors hover:shadow-lg"
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-6 hover:border-cyan-500 transition-colors hover:shadow-lg"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-moss hover:text-olive py-6">
+                  <AccordionTrigger className="text-left font-semibold text-white hover:text-cyan-500 py-6 font-[Pixel]">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-moss/80 leading-relaxed pb-6">
+                  <AccordionContent className="text-white/70 leading-relaxed pb-6 font-[Pixel]">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -100,17 +100,17 @@ export function FAQ() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-moss rounded-2xl p-8 text-oat">
-            <h3 className="text-2xl font-bold mb-4">Остались вопросы?</h3>
-            <p className="text-blush mb-6 max-w-2xl mx-auto">
+          <div className="bg-cyan-500 rounded-2xl p-8 text-black border border-black">
+            <h3 className="text-2xl font-bold mb-4 font-[Pixel]">Остались вопросы?</h3>
+            <p className="text-black/80 mb-6 max-w-2xl mx-auto font-[Pixel]">
               Наша команда поддержки готова помочь вам 24/7. Мы ответим на любые вопросы 
               о платформе, настройке и использовании YUP.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-oat text-moss px-6 py-3 rounded-xl font-semibold hover:bg-blush transition-colors">
+              <button className="bg-white text-black px-6 py-3 rounded-xl font-[Pixel] hover:bg-black hover:text-white transition-colors border border-black">
                 Написать в поддержку
               </button>
-              <button className="border-2 border-oat text-oat px-6 py-3 rounded-xl font-semibold hover:bg-oat hover:text-moss transition-colors">
+              <button className="border-2 border-black text-black px-6 py-3 rounded-xl font-[Pixel] hover:bg-black hover:text-white transition-colors">
                 Заказать демо
               </button>
             </div>

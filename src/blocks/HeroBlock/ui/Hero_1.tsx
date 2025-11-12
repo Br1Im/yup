@@ -11,7 +11,7 @@ export function Hero_1() {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <section className="relative flex items-center justify-center min-h-screen bg-oat overflow-hidden">
+    <section className="relative flex items-center justify-center min-h-screen bg-transparent overflow-hidden">
         <div className="absolute flex items-center justify-center z-30 -translate-y-20" style={{ width: '80%', gap: '100px' }}>
           <div className="h-8 relative" style={{ backgroundColor: '#424123', width: '150px', clipPath: 'polygon(0% 0%, 75% 0%, 82% 15%, 88% 30%, 95% 45%, 85% 60%, 92% 80%, 78% 100%, 0% 100%)' }}>
             <div className="absolute right-0 top-1 w-4 h-2" style={{ backgroundColor: '#2d2d17' }}></div>

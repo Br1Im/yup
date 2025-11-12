@@ -30,7 +30,7 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="py-20 bg-moss text-oat relative overflow-hidden">
+    <section className="py-20 bg-transparent text-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
@@ -46,10 +46,10 @@ export function Stats() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-[Pixel]">
             YUP в цифрах
           </h2>
-          <p className="text-xl text-blush max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto font-[Pixel]">
             Результаты, которые говорят сами за себя. Наша платформа помогает тысячам людей 
             достигать своих целей и трансформировать жизнь.
           </p>
@@ -66,8 +66,8 @@ export function Stats() {
               className="text-center group"
             >
               <div className="relative">
-                <div className="inline-flex p-6 bg-olive/20 backdrop-blur-sm rounded-2xl mb-6 group-hover:bg-olive/30 transition-all duration-300 group-hover:scale-110">
-                  <stat.icon className="w-12 h-12 text-oat" />
+                <div className="inline-flex p-6 bg-cyan-500/20 backdrop-blur-sm rounded-2xl mb-6 group-hover:bg-cyan-500/30 transition-all duration-300 group-hover:scale-110 border border-cyan-500">
+                  <stat.icon className="w-12 h-12 text-cyan-500" />
                 </div>
                 
                 <motion.div
@@ -77,15 +77,15 @@ export function Stats() {
                   viewport={{ once: true }}
                   className="space-y-3"
                 >
-                  <div className="text-4xl lg:text-5xl font-bold mb-2">
+                  <div className="text-4xl lg:text-5xl font-bold mb-2 font-[Pixel]">
                     {stat.number}
                   </div>
                   
-                  <div className="text-xl font-semibold text-blush">
+                  <div className="text-xl font-semibold text-cyan-500 font-[Pixel]">
                     {stat.label}
                   </div>
                   
-                  <div className="text-oat/80 leading-relaxed">
+                  <div className="text-white/70 leading-relaxed font-[Pixel]">
                     {stat.description}
                   </div>
                 </motion.div>
@@ -101,12 +101,12 @@ export function Stats() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="inline-flex flex-col items-center gap-4 p-8 bg-olive/20 backdrop-blur-md rounded-2xl border border-olive/30">
-            <h3 className="text-2xl font-bold">Станьте частью сообщества YUP</h3>
-            <p className="text-blush max-w-md">
+          <div className="inline-flex flex-col items-center gap-4 p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+            <h3 className="text-2xl font-bold font-[Pixel]">Станьте частью сообщества YUP</h3>
+            <p className="text-white/80 max-w-md font-[Pixel]">
               Присоединяйтесь к тысячам людей, которые уже изменили свою жизнь с помощью ИИ
             </p>
-            <button className="bg-oat text-moss px-8 py-3 rounded-xl font-semibold hover:bg-blush transition-colors">
+            <button className="bg-cyan-500 text-black px-8 py-3 rounded-xl font-[Pixel] hover:bg-white transition-colors border border-black">
               Начать бесплатно
             </button>
           </div>

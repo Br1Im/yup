@@ -1,9 +1,6 @@
 import { motion } from 'motion/react';
 import { Card } from '@/shared/ui/card';
 import { Button } from '@/shared/ui/button';
-import { Slider } from '@/shared/ui/slider';
-import { ScrollArea } from '@/shared/ui/scroll-area';
-import { useState } from 'react';
 import { 
   Brain, 
   Target, 
@@ -45,22 +42,19 @@ const features = [
 ];
 
 export function Features() {
-  const [goalIntensity, setGoalIntensity] = useState([50]);
-  const [dailyTime, setDailyTime] = useState([30]);
-
   return (
-    <section id="features" className="py-20 bg-oat">
+    <section id="features" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blush rounded-full mb-6">
-            <Sparkles className="w-4 h-4 text-moss" />
-            <span className="text-sm font-medium text-moss">Возможности платформы</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500 rounded-lg mb-6">
+            <Sparkles className="w-4 h-4 text-cyan-500" />
+            <span className="text-xs text-cyan-500">Возможности платформы</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-moss">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Все для вашего развития
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            YUP объединяет передовые AI-технологии с проверенными методиками личностного роста
+          <p className="text-base text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <span style={{ fontFamily: '"Press Start 2P", monospace' }}>YUP</span> объединяет передовые AI-технологии с проверенными методиками личностного роста
           </p>
         </div>
 
@@ -73,16 +67,16 @@ export function Features() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className={`p-6 h-full bg-${feature.bgColor} border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}>
+              <Card className="p-6 h-full bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="space-y-4">
-                  <div className={`w-12 h-12 bg-${feature.color} rounded-lg flex items-center justify-center`}>
-                    <feature.icon className="w-6 h-6 text-oat" />
+                  <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center">
+                    <feature.icon className="w-6 h-6 text-black" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                  <a href="#" className="inline-flex items-center text-moss hover:text-olive transition-colors">
+                  <h3 className="text-base font-semibold text-white">{feature.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{feature.description}</p>
+                  <a href="#" className="inline-flex items-center text-cyan-500 hover:text-white transition-colors text-xs">
                     Узнать больше
-                    <ArrowRight className="ml-1 w-4 h-4" />
+                    <ArrowRight className="ml-1 w-3 h-3" />
                   </a>
                 </div>
               </Card>
@@ -90,77 +84,15 @@ export function Features() {
           ))}
         </div>
 
-        {/* Демонстрация слайдеров и скроллбара */}
-        <div className="mb-16">
-          <div className="bg-blush p-8 rounded-2xl max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-moss text-center">
-              Настройте свои цели
-            </h3>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <label className="block text-moss font-medium">
-                  Интенсивность целей: {goalIntensity[0]}%
-                </label>
-                <Slider
-                  value={goalIntensity}
-                  onValueChange={setGoalIntensity}
-                  max={100}
-                  step={1}
-                  className="w-full"
-                />
-                <p className="text-sm text-olive">
-                  Определите, насколько амбициозными должны быть ваши цели
-                </p>
-              </div>
-              
-              <div className="space-y-4">
-                <label className="block text-moss font-medium">
-                  Время в день: {dailyTime[0]} минут
-                </label>
-                <Slider
-                  value={dailyTime}
-                  onValueChange={setDailyTime}
-                  max={120}
-                  min={10}
-                  step={5}
-                  className="w-full"
-                />
-                <p className="text-sm text-olive">
-                  Сколько времени вы готовы уделять развитию ежедневно
-                </p>
-              </div>
-            </div>
-            
-            <div className="mt-8">
-              <h4 className="text-lg font-semibold text-moss mb-4">Рекомендации для вас:</h4>
-              <ScrollArea className="h-32 w-full rounded-lg bg-oat p-4">
-                <div className="space-y-2">
-                  <p className="text-sm text-moss">• Начните с медитации 10 минут в день</p>
-                  <p className="text-sm text-moss">• Читайте развивающую литературу 15 минут</p>
-                  <p className="text-sm text-moss">• Ведите дневник благодарности</p>
-                  <p className="text-sm text-moss">• Изучайте новый навык 20 минут</p>
-                  <p className="text-sm text-moss">• Занимайтесь физическими упражнениями</p>
-                  <p className="text-sm text-moss">• Практикуйте осознанность в течение дня</p>
-                  <p className="text-sm text-moss">• Общайтесь с наставником или коучем</p>
-                  <p className="text-sm text-moss">• Анализируйте свой прогресс еженедельно</p>
-                  <p className="text-sm text-moss">• Ставьте краткосрочные и долгосрочные цели</p>
-                  <p className="text-sm text-moss">• Развивайте эмоциональный интеллект</p>
-                </div>
-              </ScrollArea>
-            </div>
-          </div>
-        </div>
-
         <div className="text-center">
-          <div className="bg-moss text-oat p-8 rounded-2xl max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-oat">
+          <div className="bg-cyan-500 text-black p-8 rounded-2xl max-w-4xl mx-auto border border-black">
+            <h3 className="text-xl font-bold mb-4 text-black">
               Готовы начать свое путешествие?
             </h3>
-            <p className="text-blush mb-6">
-              Присоединяйтесь к тысячам людей, которые уже меняют свою жизнь с YUP
+            <p className="text-black/80 mb-6 text-sm">
+              Присоединяйтесь к тысячам людей, которые уже меняют свою жизнь с <span style={{ fontFamily: '"Press Start 2P", monospace' }}>YUP</span>
             </p>
-            <Button size="lg" className="bg-oat text-moss hover:bg-blush">
+            <Button size="lg" className="bg-white text-black hover:bg-black hover:text-white border border-black text-sm">
               Начать бесплатно
             </Button>
           </div>
