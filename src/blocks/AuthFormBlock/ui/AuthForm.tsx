@@ -134,10 +134,8 @@ export function AuthForm() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black p-4 relative overflow-hidden">
-      <StarField count={5000} clusterCount={80
-      } />
+      <StarField count={2000} clusterCount={50} />
       <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-8 items-center relative z-10">
-        {/* Левая часть - анимированный песель */}
         <div
           className="hidden lg:flex items-center justify-center bg-gradient-to-br rounded-3xl overflow-hidden p-0 min-h-[600px] relative z-20"
         >
